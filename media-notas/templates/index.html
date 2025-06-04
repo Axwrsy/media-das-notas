@@ -1,0 +1,108 @@
+<html>
+    <head>
+        <title>Formulário</title>
+    </head>
+    <body>
+        <p>Média das notas</p>
+
+        <div>
+            <form method="get">
+                <h2>Primeira Nota:</h2>
+                <input type="text" name="primeira">
+                <br>
+                <h2>Segunda Nota:</h2>
+                <input type="text" name="segunda">
+                <br>
+                <input type="submit" value="Enviar">
+            </form>
+        </div>
+
+        {% if resultado %}
+        <div>
+            {{resultado}} com média {{media}}!!!
+        </div>
+        {% endif %}
+
+        <style>
+            body {
+                background-color: antiquewhite;
+                font-family: Arial, sans-serif;
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                padding: 40px 20px;
+                color: #333;
+            }
+
+            h1 {
+                margin-bottom: 20px;
+                font-size: 2rem;
+            }
+            p  {
+                font-size: 2rem;
+                font-family: 'Courier New', Courier, monospace;
+                font-weight: bolder;
+            }
+
+            form {
+                background: #fff;
+                padding: 20px 30px;
+                border-radius: 8px;
+                box-shadow: 0 0 10px rgba(0,0,0,0.1);
+                width: 300px;
+              
+            }
+
+            form label {
+                display: block;
+                margin: 15px 0 5px;
+                font-weight: bold;
+            }
+
+            input[type="text"] {
+                width: 100%;
+                margin-top: 2%;
+                padding: 8px 10px;
+                border: 1.5px solid #ccc;
+                border-radius: 5px;
+                font-size: 1rem;
+                transition: border-color 0.3s ease;
+            }
+
+            input[type="text"]:focus {
+                border-color: #68362a;
+                outline: none;
+            }
+
+            input[type="submit"] {
+                margin-top: 20px;
+                width: 100%;
+                padding: 10px;
+                background-color: #41350e;
+                border: none;
+                border-radius: 5px;
+                color: white;
+                font-weight: bold;
+                font-size: 1rem;
+                cursor: pointer;
+                transition: background-color 0.3s ease;
+            }
+
+            input[type="submit"]:hover {
+                background-color: #8a6536;
+            }
+
+            .resultado {
+                margin-top: 25px;
+                padding: 15px 25px;
+                background-color: #dff0d8;
+                border: 1px solid #3c763d;
+                border-radius: 6px;
+                color: #3c763d;
+                font-weight: bold;
+                width: 300px;
+                text-align: center;
+            }
+        </style>
+    </body>
+</html>
